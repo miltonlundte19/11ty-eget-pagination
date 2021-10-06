@@ -4,7 +4,13 @@
   "description": "https://www.freetogame.com/api-doc",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:sass": "sass src/sass:src/css",
+    "build:eleventy": "eleventy",
+
+    "watch:sass": "sass --watch src/sass:src/css",
+    "watch:eleventy": "eleventy --serve",
+    "start": "npm-run-all --parallel watch:*"
+
   },
   "keywords": [],
   "author": "",
