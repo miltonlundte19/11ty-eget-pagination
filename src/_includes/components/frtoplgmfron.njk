@@ -1,8 +1,18 @@
-{# <section>
-    {% fro 5 in freetoplayall %}
-    <div>
-        <img src="" alt="">
-        <p></p>
-    </div>
+<section class="gams">
+    {% for item in freetoplayall %}
+        <div class="gams-item">
+            <img src="{{ item.thumbnail }}" alt="" class="gams-item_img">
+            <h2 class="gams-item_titel">{{ item.title }}</h2>
+            <input type="checkbox" class="gams-item_info-toggel" id="{{ item.id }}">
+            <div class="gams-item_info-box">
+                <p class="gams-item_description">{{ item.short_description }}</p>
+                <h3 class="gams-item_dev">Developed by {{ item.developer }} and published by {{ item.pulisher }}</h3>
+                <p class="gams-item_geninfo">Platform: {{ item.platform}}.  Genre: {{ item.genre }}.</p>
+                <a class="gams-item_gamurl" href="{{ item.game_url }}">Game url</a>
+            </div>
+            <label for="{{ item.id }}" class="gams-item_info-toggel-label">
+                <span>x</span>
+            </label>
+        </div>
     {% endfor %}
-</section> #}
+</section>

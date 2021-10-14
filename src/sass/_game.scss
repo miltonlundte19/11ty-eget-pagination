@@ -1,0 +1,22 @@
+.gams {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    columns: 4 40ch;
+    gap: 3rem;
+
+
+    &-item {
+        break-inside: avoid;
+        margin-bottom: 1rem;
+
+        &_info {
+            &-box {
+                display: none;
+            }
+            &-toggel:checked + &-box {
+                display: block;
+            }
+        }
+    }
+}

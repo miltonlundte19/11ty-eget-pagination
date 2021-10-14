@@ -5,7 +5,7 @@ module.exports = async function() {
 
     let baseUrl = `https://www.freetogame.com/api/games`;
 
-    let asset = new AssetCache("frtoplall");
+    let asset = new AssetCache("freetoplayall");
 
     if(asset.isCacheValid("2d")) {
         return asset.getCachedValue();

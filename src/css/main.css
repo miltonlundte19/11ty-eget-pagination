@@ -1,3 +1,21 @@
+.gams {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  columns: 4 40ch;
+  gap: 3rem;
+}
+.gams-item {
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+.gams-item_info-box {
+  display: none;
+}
+.gams-item_info-toggel:checked + .gams-item_info-box {
+  display: block;
+}
+
 body {
   background-color: #fefefe;
 }
