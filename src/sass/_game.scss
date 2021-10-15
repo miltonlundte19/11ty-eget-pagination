@@ -2,21 +2,77 @@
     margin-top: 2rem;
     margin-left: 1rem;
     margin-right: 1rem;
-    columns: 4 40ch;
+    display: flex;
+    flex-wrap: wrap;    
     gap: 3rem;
-
-
+    justify-content: center;
     &-item {
-        break-inside: avoid;
-        margin-bottom: 1rem;
-
+        width: 25rem;
+        &-border {
+            border: black 1px solid;
+            background-color: rgb(36, 36, 36);
+            color: #fefefe;
+            box-shadow: 0 0 0.7em 0 #000;
+        }
+        &_img {
+            width: 100%;
+        }
+        &_titel {
+            text-align: center;
+            text-transform: uppercase;
+        }
         &_info {
             &-box {
                 display: none;
+                margin-bottom: 1rem;
+                padding: 0 1em;
+            }
+            &-toggel {
+                display: none;
+                &-label {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    & span{
+                        cursor: pointer;
+                        position: relative;
+                        &::after, &::before{
+                           display: block;
+                           background: white;
+                           height: 2px;
+                           width: 2em;
+                           border-radius: 2px;
+                           content: '';
+                           position: absolute;
+                           bottom: 0;
+                           top: 50%;
+                        }
+                        &::before {
+                            right: 7px;
+                        }
+                        &::after {
+                            left: 7px;
+                        }
+                       
+                    }
+                    
+                    
+                    
+                }
             }
             &-toggel:checked + &-box {
-                display: block;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
             }
+        }
+        &_geninfo {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 1rem;
+        }
+        &_gamurl {
+            text-decoration: none;
         }
     }
 }

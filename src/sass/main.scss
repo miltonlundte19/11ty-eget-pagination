@@ -1,14 +1,11 @@
 @use 'game';
 
-
 body {
-    background-color: #fefefe;
+    margin: 0;
 }
 
-h1 {
-    color: royalblue;
-}
+main {
+    background-color: rgb(56, 56, 56);
 
-p {
-    color: seagreen;
+    padding-top: 2em;
 }

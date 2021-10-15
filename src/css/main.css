@@ -2,30 +2,82 @@
   margin-top: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
-  columns: 4 40ch;
+  display: flex;
+  flex-wrap: wrap;
   gap: 3rem;
+  justify-content: center;
 }
 .gams-item {
-  break-inside: avoid;
-  margin-bottom: 1rem;
+  width: 25rem;
+}
+.gams-item-border {
+  border: black 1px solid;
+  background-color: #242424;
+  color: #fefefe;
+  box-shadow: 0 0 0.7em 0 #000;
+}
+.gams-item_img {
+  width: 100%;
+}
+.gams-item_titel {
+  text-align: center;
+  text-transform: uppercase;
 }
 .gams-item_info-box {
   display: none;
+  margin-bottom: 1rem;
+  padding: 0 1em;
+}
+.gams-item_info-toggel {
+  display: none;
+}
+.gams-item_info-toggel-label {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.gams-item_info-toggel-label span {
+  cursor: pointer;
+  position: relative;
+}
+.gams-item_info-toggel-label span::after, .gams-item_info-toggel-label span::before {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 50%;
+}
+.gams-item_info-toggel-label span::before {
+  right: 7px;
+}
+.gams-item_info-toggel-label span::after {
+  left: 7px;
 }
 .gams-item_info-toggel:checked + .gams-item_info-box {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.gams-item_geninfo {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+}
+.gams-item_gamurl {
+  text-decoration: none;
 }
 
 body {
-  background-color: #fefefe;
+  margin: 0;
 }
 
-h1 {
-  color: royalblue;
-}
-
-p {
-  color: seagreen;
+main {
+  background-color: #383838;
+  padding-top: 2em;
 }
 
 /*# sourceMappingURL=main.css.map */
