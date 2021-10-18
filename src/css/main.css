@@ -35,9 +35,9 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 .gams-item_info-toggel-label span {
-  cursor: pointer;
   position: relative;
 }
 .gams-item_info-toggel-label span::after, .gams-item_info-toggel-label span::before {
